@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .contenedor{
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 4fr 2fr 1fr;
+            grid-template-areas: 
+            'header    header'
+            'izq        main'
+            'publi      main'
+            'footer     footer';
+            height: 500px;
+        }
+
+        header{
+            background-color: aqua;
+            grid-area: header;
+        }
+        aside{
+            background-color: red;
+            grid-area: izq;
+        }
+        main{
+            background-color: green;
+            grid-area: main;
+        }
+        footer{
+            background-color: yellow;
+            grid-area: footer;
+        }
+        .item5{
+            background-color: pink;
+            grid-area: publi;
+        } 
+    </style> 
+
+    <style>
+    .enlace-nav{
+        font-size: 20px;
+        padding: 5px;
+    }
+    
+    .enlace-nav:hover{
+        background-color: rgb(212, 126, 21);
+    }
+    
+    nav{
+        
+        flex-direction: row; 
+        text-align: center;
+    }
+    
+    
+        nav{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+       @media screen and (max-width:700px) {
+        .contenedor{
+            grid-template-rows: 1fr 4fr 2fr 1fr;
+            grid-template-areas: 
+            'header    header'
+            'main       main'
+            'publi      izq'
+            'footer     footer';
+        }
+    }
+        @media screen and (max-width:600px) {
+        .contenedor{
+            grid-template-rows: 1fr 4fr 2fr 1fr;
+            grid-template-areas: 
+            'header    header'
+            'main       main'
+            'izq      izq'
+            'footer     footer';
+        }
+        .item5{
+            display: none;
+        }
+        nav{
+            flex-direction: column;
+            text-align: center;
+        
+
+        
+       } 
+    }
+        
+            
+        
+        
+    </style>
+    <!-- <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            animation-name: cajita;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite; /*se repite infinitas veces*/
+            }
+            @keyframes cajita{
+                /* from {background-color: rgb(180, 47, 47);}
+                to{
+                    background-color: blue; */
+                 0%{background-color: aqua;} 
+                 25%{background-color: rgb(255, 136, 0);} 
+                 50%{background-color: rgb(76, 0, 255);} 
+                 100%{background-color: aqua;}   
+                }
+            
+    </style> -->
+</head>
+
+<body>
+
+    
+    <!-- <div class="contenedor">
+        <header>Header</header>
+        <aside>izq</aside>
+        <main>main</main>
+        <footer>footer</footer>
+        <div class="item5">publi</aside>
+
+    </div>  -->
+
+    <div class="contenedor">
+        <header>
+            <nav>
+    
+        <a href="#" class="enlace-nav">Inicio</a>
+        <a href="#" class="enlace-nav">Nosotros</a>
+        <a href="#" class="enlace-nav">Contacto</a>
+        <a href="#" class="enlace-nav">Acerca de</a>
+    </nav>
+    </header>
+        <aside>izq</aside>
+        <main>main</main>
+        <footer>footer</footer>
+        <div class="item5">publi</aside>
+        
+    
+    </div>
+
+    <!-- <div>
+        <p>Hola!! Cómo estás</p>
+    </div> -->
+</body>
+</html>
